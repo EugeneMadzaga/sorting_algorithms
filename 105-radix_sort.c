@@ -17,6 +17,8 @@ int findmax(int *array, size_t size)
 		if (max < array[i])
 			max = array[i];
 	}
+	print_array(array, size);
+	printf("\n");
 	return (max);
 }
 
@@ -41,6 +43,8 @@ void radix_sort(int *array, size_t size)
 		counting_sort_r(array, size, pos, out, ca), print_array(array, size);
 	free(out);
 	free(ca);
+	print_array(array, size);
+	printf("\n");
 }
 
 /**
@@ -72,4 +76,5 @@ void counting_sort_r(int *array, size_t size, int pos, int *out, int *ca)
 	for (i = 0; i < (int)size; i++)
 		array[i] = out[i];
 	print_array(array, size);
+	printf("\n");
 }
