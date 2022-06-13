@@ -71,4 +71,5 @@ void counting_sort_r(int *array, size_t size, int pos, int *out, int *ca)
 	}
 	for (i = 0; i < (int)size; i++)
 		array[i] = out[i];
+	print_array(array, size);
 }
